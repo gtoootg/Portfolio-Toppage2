@@ -1,0 +1,156 @@
+.home {
+  position: relative;
+}
+
+.home .header {
+  position: absolute;
+  left: 0;
+  opacity: 0.85;
+  z-index: 1;
+  background-color: black;
+}
+
+.home .header h1 {
+  color: white;
+}
+
+.home .header h5 {
+  color: white;
+}
+
+.home .header .header-logo {
+  font-size: 30px;
+  color: white;
+}
+
+.home .home-main {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100vh;
+}
+
+.home .home-main .bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 100vh;
+  background-size: cover;
+}
+
+.home .home-main .notification {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  text-align: center;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.home .home-main .TopMessage {
+  margin-top: 25vh;
+  margin-left: 30px;
+}
+
+.home .home-main .TopMessage h1 {
+  z-index: 1;
+  color: white;
+}
+
+.home .home-main .TopMessage h4 {
+  text-align: left;
+  z-index: 1;
+  color: white;
+}
+
+.home .home-main .TopMessage #button-profile {
+  color: white;
+  border-radius: 10px;
+  background-color: #ffa500;
+  opacity: 0.7;
+  z-index: 1;
+  font-size: 15px;
+  text-align: left;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.home .home-main .TopMessage #button-profile:hover {
+  opacity: 1;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.home .home-main .TopMessage #button-portfolio {
+  color: white;
+  border-radius: 10px;
+  background-color: #008000;
+  opacity: 0.7;
+  z-index: 1;
+  font-size: 15px;
+  text-align: left;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.home .home-main .TopMessage #button-portfolio:hover {
+  opacity: 1;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile .header .header-logo {
+  font-size: 30px;
+}
+
+.profile .main .image-container {
+  height: auto;
+}
+
+.profile .main .image-container .bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  max-width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+#topImage {
+  width: 30%;
+  border-radius: 20%;
+}
+
+.slide-button-container {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slide-button-container .slide-button {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+/*# sourceMappingURL=index.css.map */
