@@ -7,8 +7,8 @@ import styles from '../../styles/homeMain.module.css'
 const mainImageList = [
   {
     id:0,
-    name:'airplane',
-    image:'image/airplane.jpg',
+    name:'kyoto',
+    image:'image/kyoto.jpg',
   },
   {
     id:1,
@@ -89,7 +89,7 @@ function HomeMain (){
 
   useEffect(() => setTimeout(()=>setToggle(!toggle),1500))
 
-  useEffect(() => setTimeout(setIndexHandler,5000))
+  useEffect(() => setTimeout(setIndexHandler,6000))
 
   return(
     <div className="container">

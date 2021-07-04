@@ -21,6 +21,7 @@
 
 .homeMain__topMessage h1 {
   font-size: 50px;
+  margin-bottom: 15px;
 }
 
 .homeMain__topMessage h4 {
@@ -35,6 +36,8 @@
   font-size: 25px;
   color: white;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .homeMain__topMessage button:hover {

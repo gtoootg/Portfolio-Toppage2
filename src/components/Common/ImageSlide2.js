@@ -11,7 +11,7 @@ export default function ImageSlide2(props) {
     from: { opacity: 0 },
     enter: { opacity: 0.9 },
     leave: { opacity: 0 },
-    config: { duration: 500 },
+    config: { duration: 1500 },
   })
 
   return (
