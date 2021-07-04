@@ -1,7 +1,8 @@
 import React,{useState, useEffect} from 'react';
-import {useTransition, useSpring, animated, config} from 'react-spring';
-import {BrowserRouter, Route, Link} from 'react-router-dom'
-import ImageSlide from '../Common/ImageSlide.js';
+import {Link} from 'react-router-dom'
+import ImageSlide2 from '../Common/ImageSlide2.js';
+
+import styles from '../../styles/homeMain.module.css'
 
 const mainImageList = [
   {
@@ -28,62 +29,78 @@ const mainImageList = [
 
 function TopMessage() {
   return(
-    <div className="TopMessage d-flex align-items-start flex-column justify-content-center">
+    <div className={styles.homeMain__topMessage}>
       <h1>Hello My name is Michihiro Goto</h1>
-      <h4>I am Japanese living in Munich,Germany<br/>In this website, you can find things about myself, including my career, portfolio, and travel gallery.</h4>
-      <div className="mt-3 mb-3"></div>
-      <p id="button-profile"><Link to ="/profile">GO TO SEE MY PROFILE</Link></p>
-      <p classNane="mt-3" id="button-portfolio" href="#">GO TO SEE MY PORTFOLIO</p>
+      <h4>I am Japanese living in Munich,Germany<br/>
+          In this website, you can find things about myself,<br/> 
+          including my career, portfolio, and travel gallery.
+      </h4>
+      
+      <button type="button" class="btn btn-success">
+          <Link 
+              to ="/profile" 
+              style={{
+                textDecoration:"none",
+                color:"white"
+              }}
+          >
+                GO TO SEE MY PROFILE
+          </Link>
+      </button>
+      <br/>
+      <button type="button" class="btn btn-warning" id="button-portfolio">
+        GO TO SEE MY PORTFOLIO
+      </button>
       
     </div>
     
   )
 }
 
-function Notification(props){
-  return(
-    <animated.div style={props.style}className="notification">
-      <span>&#9650; &#9650; &#9650;</span><br/>
-      <span>you can access to the contents from here</span>
-    </animated.div>
-  )
-}
+// function Notification(props){
+//   return(
+//     <animated.div style={props.style}className="notification">
+//       <span>&#9650; &#9650; &#9650;</span><br/>
+//       <span>you can access to the contents from here</span>
+//     </animated.div>
+//   )
+// }
 
 function HomeMain (){
   
-  const[count, setCount]=useState(0)
+  const[index, setIndex]=useState(0)
   const[toggle, setToggle] =useState(true)
 
-  // const transition = useTransition(mainImageList[count], item => item.id, {
-  //   from:{opacity:0},
-  //   enter:{opacity:0.9},
-  //   leave:{opacity:0},
-  //   // config: config.molasses,
-  // })
+  const setIndexHandler = ()=>{
+    if(index===3){
+      setIndex(0)
+    }else{
+      setIndex(index+1)
+    }
+  }
 
-  const reminderAnimation = useSpring({
-    // reset:true,
-    to:{opacity: toggle? 0:1},
-    from: { opacity: toggle? 1:0 },
-    config: { duration: 500 }
-  })
+  // const reminderAnimation = useSpring({
+  //   // reset:true,
+  //   to:{opacity: toggle? 0:1},
+  //   from: { opacity: toggle? 1:0 },
+  //   config: { duration: 500 }
+  // })
 
 
   useEffect(() => setTimeout(()=>setToggle(!toggle),1500))
 
+  useEffect(() => setTimeout(setIndexHandler,5000))
 
   return(
-    <div className="home-main">
-    <ImageSlide  
-      // style={{position:'relative'}}
-      Items={mainImageList}
-            count={count}
-            setCount={setCount}
-            opacity={0.9}
-      />
-     
-      <TopMessage/>
-      <Notification style={reminderAnimation}/>
+    <div className="container">
+    <div className={styles.homeMain}>
+        <ImageSlide2
+              className={styles.homeMain__imageSlide}
+              slides={mainImageList}
+              index={index}
+        />
+        <TopMessage/>
+          </div>
     </div>
     
   )

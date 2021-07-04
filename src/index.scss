@@ -1,26 +1,26 @@
-@mixin header{
+// @mixin header{
 
 
-  & h1{
-    color:white;
-  }
+//   & h1{
+//     color:white;
+//   }
 
-  & h5{
-    color:white;
-  }
+//   & h5{
+//     color:white;
+//   }
 
-  background-color:black;
-  & .header-logo{
-    font-size:30px;
-    color:white;
-  }
-}
+//   background-color:black;
+//   & .header-logo{
+//     font-size:30px;
+//     color:white;
+//   }
+// }
 
 @mixin button($color){
   color:white;
   border-radius: 10px;
   background-color: $color ;
-  opacity: 0.7;
+  
   z-index: 1;
   font-size:15px;
   text-align:left;
@@ -46,101 +46,101 @@
 // }
 
 
-.home{
-  position:relative;
+// .home{
+//   position:relative;
 
- .header{
-  //  @include header;
-   position:absolute;
-   left:0;
-  // width:100%;
-   opacity:0.85;
-   z-index: 1;
-   background-color:black;
-   & h1{color:white}
-   & h5{color:white;}
-   & .header-logo{
-    font-size:30px;
-    color:white;
-    }
- }
+// //  .header{
+// //   //  @include header;
+// //   //  position:absolute;
+// //    left:0;
+// //   // width:100%;
+// //    opacity:0.85;
+// //   //  z-index: 1;
+// //    background-color:black;
+// //    & h1{color:white}
+// //    & h5{color:white;}
+// //    & .header-logo{
+// //     font-size:30px;
+// //     color:white;
+// //     }
+// //  }
 
-  & .home-main{
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index: 0;
-    height: 100vh;
+//   & .home-main{
+//     width:100%;
+//     position:absolute;
+//     // top:0;
+//     left:0;
+//     z-index: 1;
+//     height: 100vh;
     
-    & .bg {
-      position: absolute;
-      // z-index: 0; 
-      top: 0;
-      left: 50%;
-      // width: 100%;
-      transform: translateX(-50%);
-      height: 100vh;
-      // border-radius: 15px;
-      background-size: cover;
-      // background-position: center;
-    }
-    // &.slide-button-container{
-    //   position: absolute;
-    //   top:50px;
-    //   z-index: 5;
-    //   &.slide-button{  
-    //     height:10px;
-    //     width: 10px;
-    //     border-radius: 50%;
-    //     background-color:white;
-    //     margin-top: 15px;
-    //     margin-left:12px;
-    //     margin-right:12px;
-    // }
-    // }
+//     & .bg {
+//       position: absolute;
+//       z-index: 0; 
+//       top: 0;
+//       left: 50%;
+//       // width: 100%;
+//       transform: translateX(-50%);
+//       height: 100vh;
+//       // border-radius: 15px;
+//       background-size: cover;
+//       // background-position: center;
+//     }
+//     // &.slide-button-container{
+//     //   position: absolute;
+//     //   top:50px;
+//     //   z-index: 5;
+//     //   &.slide-button{  
+//     //     height:10px;
+//     //     width: 10px;
+//     //     border-radius: 50%;
+//     //     background-color:white;
+//     //     margin-top: 15px;
+//     //     margin-left:12px;
+//     //     margin-right:12px;
+//     // }
+//     // }
     
   
-    & .notification{
-      position:absolute;
-      top:0;
-      right:40px;
-      text-align: center;
-      font-size:20px;
-      z-index: 1;
-    }
+//     & .notification{
+//       position:absolute;
+//       top:0;
+//       right:40px;
+//       text-align: center;
+//       font-size:20px;
+//       z-index: 1;
+//     }
   
   
-    & .TopMessage{
-      margin-top: 25vh;
-      margin-left: 30px;
+//     & .TopMessage{
+//       margin-top: 25vh;
+//       margin-left: 30px;
       
-      & h1{
-        z-index: 1;
-        color:white;
-      }
+//       & h1{
+//         z-index: 1;
+//         color:white;
+//       }
   
-      & h4{
-        // font-size:25px;
-        text-align: left;
-        z-index: 1;
-        color:white;
-      }
+//       & h4{
+//         // font-size:25px;
+//         text-align: left;
+//         z-index: 1;
+//         color:white;
+//       }
       
-      & #button-profile{
-        @include button(#ffa500);
-        @include button-hover
-        ;
-      }
+//       & #button-profile{
+//         @include button(#ffa500);
+//         @include button-hover
+//         ;
+//       }
   
-      & #button-portfolio{
-        @include button(#008000);
-        @include button-hover
-        ;
-      }
-    }
-  }
-}
+//       & #button-portfolio{
+//         @include button(#008000);
+//         @include button-hover
+//         ;
+//       }
+//     }
+//   }
+// }
 
 .profile{
   .header{

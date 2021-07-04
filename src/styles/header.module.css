@@ -1,0 +1,39 @@
+.header {
+  background-color: black;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: whitesmoke;
+}
+
+.header__title {
+  font-size: 45px;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__navigation i, .header__navigation span {
+  font-size: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header__navigation i a, .header__navigation span a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+/*# sourceMappingURL=header.module.css.map */

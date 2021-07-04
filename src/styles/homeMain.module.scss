@@ -1,0 +1,49 @@
+.homeMain{
+    width:100%;
+    height:auto;
+    // left:0;
+    // height: 100vh;
+    position: relative;
+    
+    &__imageSlide{
+        position: absolute;
+        width:100%;
+        aspect-ratio:3/2;
+        z-index:1;
+    }
+
+    &__topMessage{
+        position: absolute;
+        z-index:2;
+        color:whitesmoke;
+
+        margin-top:130px;
+        margin-left:50px;
+
+        h1{
+            font-size: 50px;
+        }
+
+        h4{
+            font-size: 30px;
+        }
+
+        button{
+            margin-top:20px;
+            opacity: 0.95;
+            padding:20px;
+            border-radius: 10px;
+            font-size:25px;
+            color:white;
+            font-weight: bold;
+            &:hover{opacity:1;
+                font-size:35px;
+                text-decoration: none;
+                color:whitesmoke;
+                transition:0.3s;}
+        }
+    }
+
+    
+}
+
