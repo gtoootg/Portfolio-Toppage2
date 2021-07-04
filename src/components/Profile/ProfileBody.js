@@ -1,7 +1,7 @@
-import React,{useState, useEffect} from 'react';
-import {useTransition, useSpring, useSprings, animated, config} from 'react-spring';
+import React,{useState} from 'react';
+
 // import './index.css';
-import ImageSlide from '../Common/ImageSlide.js';
+import ImageSlide2 from '../Common/ImageSlide.js';
 
 
   function Accordion(props){
@@ -32,7 +32,7 @@ import ImageSlide from '../Common/ImageSlide.js';
           <p><strong>Current ving place:</strong>Bogehausen, Munich, Germany</p>
           <p>I grew up in the City of Otsu, where we have the biggest lake in Japan called Lake Biwa. Otsu is adjacent to Kyoto which is well known as the ancient capital of Japan, and it is only 15 minutes by train.</p>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500943.1722930991!2d135.4402043598674!3d35.02493259430951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600174ece1b10c2d%3A0x8bccbbd569908646!2sOtsu%2C%20Shiga%2C%20Japan!5e0!3m2!1sen!2sde!4v1615105485806!5m2!1sen!2sde"  height="280" allowfullscreen="" loading="lazy" className="container col-sm-5"></iframe>
+        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500943.1722930991!2d135.4402043598674!3d35.02493259430951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600174ece1b10c2d%3A0x8bccbbd569908646!2sOtsu%2C%20Shiga%2C%20Japan!5e0!3m2!1sen!2sde!4v1615105485806!5m2!1sen!2sde"  height="280" allowfullscreen="" loading="lazy" className="container col-sm-5"></iframe>
       </div>
     return(
       <div>
@@ -81,13 +81,13 @@ import ImageSlide from '../Common/ImageSlide.js';
           </thead>
           <tbody>
             <tr>
-              <td scope="row">Master of Sicence in Mechanical Engineering</td>
+              <td >Master of Sicence in Mechanical Engineering</td>
               <td>Kyoto Institute of Technology</td>
               <td>Kyoto Japan</td>
               <td>Apr.2014 - Mar.2016</td>
             </tr>
             <tr>
-              <td scope="row">Bachelor of Sicence in Mechanical Engineering</td>
+              <td >Bachelor of Sicence in Mechanical Engineering</td>
               <td>Kyoto Institute of Technology</td>
               <td>Kyoto Japan</td>
               <td>Apr.2010 - Mar.2014</td>
@@ -105,7 +105,7 @@ import ImageSlide from '../Common/ImageSlide.js';
 
           <div className="col-1"></div>
           <div className="image-container col-4" style={{position:'relative'}}>
-            <ImageSlide
+            <ImageSlide2
             Items={PhotoList}
             count={count}
             setCount={setCount}
@@ -138,13 +138,13 @@ import ImageSlide from '../Common/ImageSlide.js';
             </thead>
             <tbody>
               <tr>
-                <td scope="row">Master of Sicence in Mechanical Engineering</td>
+                <td >Master of Sicence in Mechanical Engineering</td>
                 <td>Kyoto Institute of Technology</td>
                 <td>Kyoto Japan</td>
                 <td>Apr.2014 - Mar.2016</td>
               </tr>
               <tr>
-                <td scope="row">Bachelor of Sicence in Mechanical Engineering</td>
+                <td >Bachelor of Sicence in Mechanical Engineering</td>
                 <td>Kyoto Institute of Technology</td>
                 <td>Kyoto Japan</td>
                 <td>Apr.2010 - Mar.2014</td>
@@ -193,7 +193,7 @@ import ImageSlide from '../Common/ImageSlide.js';
     return(
       <div className="container main">
         <div className="d-flex flex-row align-items-center">
-          <img className="container" id="topImage" src="image/profilepicture.jpg"/>
+          <img className="container" id="topImage" src="image/profilepicture.jpg" alt="kyoto"/>
           <div className="m-5">
             <h1>Michihiro Goto</h1>
             <p1>
