@@ -57,15 +57,6 @@ function TopMessage() {
   )
 }
 
-// function Notification(props){
-//   return(
-//     <animated.div style={props.style}className="notification">
-//       <span>&#9650; &#9650; &#9650;</span><br/>
-//       <span>you can access to the contents from here</span>
-//     </animated.div>
-//   )
-// }
-
 function HomeMain (){
   
   const[index, setIndex]=useState(0)
@@ -78,14 +69,6 @@ function HomeMain (){
       setIndex(index+1)
     }
   }
-
-  // const reminderAnimation = useSpring({
-  //   // reset:true,
-  //   to:{opacity: toggle? 0:1},
-  //   from: { opacity: toggle? 1:0 },
-  //   config: { duration: 500 }
-  // })
-
 
   useEffect(() => setTimeout(()=>setToggle(!toggle),1500))
 
