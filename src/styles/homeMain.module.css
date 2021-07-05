@@ -7,7 +7,7 @@
 .homeMain__imageSlide {
   position: absolute;
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 3.2/2;
   z-index: 1;
 }
 
