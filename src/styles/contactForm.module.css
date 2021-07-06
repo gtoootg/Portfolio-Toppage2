@@ -1,4 +1,41 @@
 .contactForm {
-  margin-top: 1000px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactForm h {
+  border-bottom: solid 0.5px gray;
+  font-size: 25px;
+}
+
+.contactForm input {
+  border: solid gray 0.5px;
+  border-radius: 5px;
+}
+
+.contactForm textarea {
+  border: solid gray 0.5px;
+  border-radius: 5px;
+  height: 100px;
+}
+
+.contactForm__buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contactForm__buttonContainer button {
+  width: 100px;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=contactForm.module.css.map */
