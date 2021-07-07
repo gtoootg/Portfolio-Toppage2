@@ -6,12 +6,17 @@
     position: relative;
 
     
-    
     &__imageSlide{
         position: absolute;
         width:100%;
         aspect-ratio:3.2/2;
         z-index:1;
+
+        @media (max-width:600px){
+            aspect-ratio:3/2;
+            position: relative;
+        }
+      
     }
 
     &__topMessage{
@@ -22,30 +27,62 @@
         margin-top:130px;
         margin-left:50px;
 
+        @media (max-width:600px){
+            position: relative;
+            margin-top:10px;
+            margin-left:10px;
+            color:black;
+        }
+
         h1{
             font-size: 50px;
             margin-bottom:15px;
+
+            @media (max-width:600px){
+                font-size:25px;
+            }
+        
         }
 
         h4{
             font-size: 30px;
+            
+            @media (max-width:600px){
+                font-size:15px;
+            }
         }
 
-        button{
-            margin-top:20px;
-            opacity: 0.95;
-            padding:20px;
-            border-radius: 10px;
-            font-size:25px;
-            color:white;
-            font-weight: bold;
-            transition:0.3s;
-            &:hover{opacity:1;
-                font-size:35px;
-                text-decoration: none;
-                color:whitesmoke;
-                transition:0.3s;}
+        &__buttonContainer{
+
+            display:flex;
+            flex-direction: column;
+
+            button{
+                width:500px;
+                margin-top:20px;
+                opacity: 0.95;
+                padding:20px;
+                border-radius: 10px;
+                font-size:25px;
+                color:white;
+                font-weight: bold;
+                transition:0.3s;
+                &:hover{opacity:1;
+                    font-size:35px;
+                    text-decoration: none;
+                    color:whitesmoke;
+                    transition:0.3s;}
+
+                @media (max-width:600px){
+                   width:250px;
+                   margin-top:10px;
+                //    margin-bottom:10px;
+                   font-size:10px;
+
+                }
+            }
         }
+       
     }
 
     

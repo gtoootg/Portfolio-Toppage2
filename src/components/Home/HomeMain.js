@@ -31,26 +31,27 @@ function TopMessage() {
   return(
     <div className={styles.homeMain__topMessage}>
       <h1>Hello My name is Michihiro Goto</h1>
-      <h4>I am Japanese living in Munich,Germany<br/>
-          In this website, you can find things about myself,<br/> 
+      <h4>I am Japanese living in Munich,Germany
+          In this website, you can find things about myself, 
           including my career, portfolio, and travel gallery.
       </h4>
       
-      <button type="button" class="btn btn-success">
-          <Link 
-              to ="/profile" 
-              style={{
-                textDecoration:"none",
-                color:"white"
-              }}
-          >
-                GO TO SEE MY PROFILE
-          </Link>
-      </button>
-      <br/>
+      <div className={styles.homeMain__topMessage__buttonContainer}>
+        <button type="button" class="btn btn-success">
+            <Link 
+                to ="/profile" 
+                style={{
+                  textDecoration:"none",
+                  color:"white"
+                }}
+            >
+                  GO TO SEE MY PROFILE
+            </Link>
+        </button>
       <button type="button" class="btn btn-warning" id="button-portfolio">
         GO TO SEE MY PORTFOLIO
       </button>
+      </div>
       
     </div>
     
@@ -76,14 +77,14 @@ function HomeMain (){
 
   return(
     <div className="container">
-    <div className={styles.homeMain}>
-        <ImageSlide2
-              className={styles.homeMain__imageSlide}
-              slides={mainImageList}
-              index={index}
-        />
-        <TopMessage/>
-          </div>
+        <div className={styles.homeMain}>
+            <ImageSlide2
+                  className={styles.homeMain__imageSlide}
+                  slides={mainImageList}
+                  index={index}
+            />
+            <TopMessage/>
+        </div>
     </div>
     
   )

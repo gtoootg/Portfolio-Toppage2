@@ -16,7 +16,7 @@ function FooterRight(){
     return(
         <div className={styles.footer__right}>
             <h2>Michihiro Goto</h2>
-            <h4>Master of Science in Mechanical Engineering</h4>
+            <h5>Master of Science in Mechanical Engineering</h5>
             <h4>Application and Design Engineer</h4>
             <h4>KOYO Deutschland GmbH</h4>
             <h4>email: michihirogoto@yahoo.co.jp</h4>

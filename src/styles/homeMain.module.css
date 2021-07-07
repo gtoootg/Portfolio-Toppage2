@@ -11,6 +11,13 @@
   z-index: 1;
 }
 
+@media (max-width: 600px) {
+  .homeMain__imageSlide {
+    aspect-ratio: 3/2;
+    position: relative;
+  }
+}
+
 .homeMain__topMessage {
   position: absolute;
   z-index: 2;
@@ -19,16 +26,48 @@
   margin-left: 50px;
 }
 
+@media (max-width: 600px) {
+  .homeMain__topMessage {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: black;
+  }
+}
+
 .homeMain__topMessage h1 {
   font-size: 50px;
   margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .homeMain__topMessage h1 {
+    font-size: 25px;
+  }
 }
 
 .homeMain__topMessage h4 {
   font-size: 30px;
 }
 
-.homeMain__topMessage button {
+@media (max-width: 600px) {
+  .homeMain__topMessage h4 {
+    font-size: 15px;
+  }
+}
+
+.homeMain__topMessage__buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeMain__topMessage__buttonContainer button {
+  width: 500px;
   margin-top: 20px;
   opacity: 0.95;
   padding: 20px;
@@ -40,12 +79,20 @@
   transition: 0.3s;
 }
 
-.homeMain__topMessage button:hover {
+.homeMain__topMessage__buttonContainer button:hover {
   opacity: 1;
   font-size: 35px;
   text-decoration: none;
   color: whitesmoke;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+  .homeMain__topMessage__buttonContainer button {
+    width: 250px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=homeMain.module.css.map */

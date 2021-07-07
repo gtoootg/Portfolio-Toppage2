@@ -1,4 +1,5 @@
 .header {
+  height: 80px;
   background-color: black;
   z-index: 10;
   display: -webkit-box;
@@ -10,10 +11,33 @@
   color: whitesmoke;
 }
 
+@media (max-width: 600px) {
+  .header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 .header__title {
   font-size: 45px;
   font-weight: bold;
   margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
 }
 
 .header__navigation {
@@ -37,5 +61,20 @@
 .header__navigation i a, .header__navigation span a {
   text-decoration: none;
   color: whitesmoke;
+}
+
+@media (max-width: 600px) {
+  .header__navigation {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .header__navigation i, .header__navigation span {
+    font-size: 15px;
+    margin-right: 3px;
+    margin-left: 3px;
+  }
 }
 /*# sourceMappingURL=header.module.css.map */
