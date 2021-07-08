@@ -14,7 +14,7 @@
 
         @media (max-width:600px){
             aspect-ratio:3/2;
-            position: relative;
+            position: static;
         }
       
     }
@@ -28,7 +28,7 @@
         margin-left:50px;
 
         @media (max-width:600px){
-            position: relative;
+            position: static;
             margin-top:10px;
             margin-left:10px;
             color:black;
