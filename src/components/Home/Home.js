@@ -6,7 +6,10 @@ import Footer from '../Common/Footer'
 function Home(){
   return(
    <>
-     <Header/>
+     <Header
+        backgroundColor="black"
+        color="white"
+     />
      <HomeMain/>
      <Footer/>
    </>

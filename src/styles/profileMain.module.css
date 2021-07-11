@@ -1,0 +1,105 @@
+.profileMain {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .profileMain {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.profileMain__introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+
+@media (max-width: 600px) {
+  .profileMain__introduction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.profileMain__introduction img {
+  width: 30%;
+  border-radius: 15%;
+}
+
+@media (max-width: 600px) {
+  .profileMain__introduction img {
+    width: 70%;
+  }
+}
+
+.profileMain__introduction__textContainer {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.profileMain__introduction__textContainer h2 {
+  font-size: 20px;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .profileMain__introduction__textContainer h2 {
+    font-size: 11px;
+  }
+}
+
+.profileMain__accordion {
+  font-size: 15px;
+}
+
+.profileMain__accordion .basicOfMyself {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .profileMain__accordion .basicOfMyself {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.profileMain__accordion .basicOfMyself__textContainer {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .profileMain__accordion .basicOfMyself__textContainer {
+    width: 100%;
+  }
+}
+
+.profileMain__accordion .basicOfMyself iframe {
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .profileMain__accordion .basicOfMyself iframe {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=profileMain.module.css.map */
