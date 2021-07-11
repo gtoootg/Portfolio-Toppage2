@@ -1,12 +1,15 @@
-import ProfileBody from './ProfileBody.js';
+import ProfileMain from './ProfileMain';
 import Header from '../Common/Header';
 
 function Profile() {
   return (
-  <div className="profile container">
-    <Header/>
-    <ProfileBody/>
-  </div>
+  <>
+    <Header
+          backgroundColor="white"
+          color="black"
+    />
+    <ProfileMain/>
+  </>
   );
 }
 

@@ -2,6 +2,21 @@ import React,{useState} from 'react';
 
 // import './index.css';
 import ImageSlide2 from '../Common/ImageSlide.js';
+import styles from '../../styles/profileMain.module.css'
+
+  function Introduction(){
+      return(
+        <div className={styles.profileMain__introduction}>
+          <img id="topImage" src="image/profilepicture.jpg" alt="kyoto"/>
+          <div className={styles.profileMain__introduction__textContainer}>
+            <h1>Michihiro Goto</h1>
+            <h2>
+              I am from Japan, and 29 years old living in Munich. After 5 years of my career in Mechanical Engineering field in Japan and Germany, I started having the strong motivation to start new career as Web application developer. Currently, I am seeking positions of Junior Web developer in Munich and made this portfolio to present my motivation and skills of web application using modern language including React Hooks, TypeScript and Laravel. Please do not hesitate to contact me in case of any questions and interest.
+            </h2>
+          </div>
+        </div>
+      )
+  }
 
 
   function Accordion(props){
@@ -24,9 +39,9 @@ import ImageSlide2 from '../Common/ImageSlide.js';
 
   function BasicOfMyself(){
     const text= 
-      <div className="container row d-flex justify-content-between mt-2 mb-2">
-        <div className="col-sm-7">
-          <p ><strong>Name:</strong>Michihiro Goto</p>
+      <div className={styles.basicOfMyself}>
+        <div className={styles.basicOfMyself__textContainer}>
+          <p><strong>Name:</strong>Michihiro Goto</p>
           <p><strong>Birthday:</strong>31/01/1992</p>
           <p><strong>HomeTown:</strong>Otsu,Japan. </p>
           <p><strong>Current ving place:</strong>Bogehausen, Munich, Germany</p>
@@ -35,9 +50,7 @@ import ImageSlide2 from '../Common/ImageSlide.js';
         <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500943.1722930991!2d135.4402043598674!3d35.02493259430951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600174ece1b10c2d%3A0x8bccbbd569908646!2sOtsu%2C%20Shiga%2C%20Japan!5e0!3m2!1sen!2sde!4v1615105485806!5m2!1sen!2sde"  height="280" allowfullscreen="" loading="lazy" className="container col-sm-5"></iframe>
       </div>
     return(
-      <div>
         <Accordion value={"Basic of Myself"} text={text} Id={"One"}/>
-      </div>
     )
 
   }
@@ -186,67 +199,22 @@ import ImageSlide2 from '../Common/ImageSlide.js';
     )
   }
 
-
-
-
-  function ProfileBody(){
+  function ProfileMain(){
     return(
-      <div className="container main">
-        <div className="d-flex flex-row align-items-center">
-          <img className="container" id="topImage" src="image/profilepicture.jpg" alt="kyoto"/>
-          <div className="m-5">
-            <h1>Michihiro Goto</h1>
-            <p1>
-              <strong>I am from Japan, and 29 years old. Currently, I work as Mechanical design engineer in Automotive industry in Munich. In this page, you can find everything about myself, such as my career and education.
-              If you get further interest on me, do not hesitate to contact for any question</strong>
-            </p1>
+      <div className={styles.profileMain}>
+          <Introduction/>
+          <div className={styles.profileMain__accordion}>
+              <BasicOfMyself/>
+              <EducationOfMyself/>
+              <CareerOfMyself/>
+              <WhyAmILivingInGermany/>
+              <WhatIsThePleasureOfMylife/>
+              <WhyDoIHaveThisPortfolio/>
           </div>
-        </div>
-        <BasicOfMyself/>
-        <EducationOfMyself/>
-        <CareerOfMyself/>
-        <WhyAmILivingInGermany/>
-        <WhatIsThePleasureOfMylife/>
-        <WhyDoIHaveThisPortfolio/>
       </div>
     )
   }
 
-
-
-
-
-// ****Component by React **** //
-// function MyProfile(props){
-//     return(
-//         <div>
-//           <ul onClick={()=>props.onClick()}>Who am I?</ul> 
-//             <animated.div style={props.style}>
-//               <li>Myname:{myProfile.name}</li>
-//               <li>Date of Birth:{myProfile.birthday}</li>
-//               <li>Where am I from?:{myProfile.homeTown}</li>
-//               <li>Where am I living?:{myProfile.address}</li>
-//             </animated.div>
-//         </div>
-//     )
-// }
-// ****Component by React **** //
-
-
-
-export default ProfileBody
-  // const[toggle,setToggle] = useState({BasicOfMyself:false, address:false})
- 
-
-//   function onClickHandler(){
-//   setToggle({...toggle, profile:!toggle.profile})
-// 　}
-
-  // const spring = useSpring({
-  //   height:toggle.profile? '100%':'0px', overflow:'hidden',
-  //   from:{height:toggle.profile? '100%':'0px', overflow:'hidden'},
-  //   config: { duration: 1000 }
-  // })
-  
+export default ProfileMain
 
 
