@@ -1,18 +1,17 @@
 .footer{
-    // border:solid 1px black;
-
-    margin-top:850px;
-    margin-bottom:50px;
+    width:1280px;
+    margin:50px auto;
     height:auto;
 
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 
-
     @media (max-width:600px){
-        margin-top:20px;
+        width:100%;
         flex-direction: column;
+        padding-left:10px;
+        padding-right:10px;
      }
 
     &__left{
@@ -53,8 +52,6 @@
             font-size: 60px;
             margin:20px;
         }
-
-        
     }
 
 }

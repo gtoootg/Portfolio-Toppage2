@@ -1,6 +1,6 @@
 .footer {
-  margin-top: 850px;
-  margin-bottom: 50px;
+  width: 1280px;
+  margin: 50px auto;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,11 +16,13 @@
 
 @media (max-width: 600px) {
   .footer {
-    margin-top: 20px;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

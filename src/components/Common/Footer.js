@@ -21,7 +21,7 @@ function FooterRight(){
             <h4>KOYO Deutschland GmbH</h4>
             <h4>email: michihirogoto@yahoo.co.jp</h4>
             <div className={styles.footer__right__iconContainer}>
-                <i className="header-logo fab fa-youtube"></i>
+                {/* <i className="header-logo fab fa-youtube"></i> */}
                 <i className="header-logo fab fa-instagram"></i>
                 <i className="header-logo fab fa-linkedin"></i>
             </div>
@@ -31,12 +31,12 @@ function FooterRight(){
 
 function Footer(){
     return (
-      <div className="container">
+    //   <div className="container">
           <div className={styles.footer}>
             <FooterLeft/>
             <FooterRight/>
           </div>
-      </div>
+    //   </div>
     );
 }
 

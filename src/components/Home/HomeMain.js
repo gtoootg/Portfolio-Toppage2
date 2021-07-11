@@ -35,7 +35,6 @@ function TopMessage() {
           In this website, you can find things about myself, 
           including my career, portfolio, and travel gallery.
       </h4>
-      
       <div className={styles.homeMain__topMessage__buttonContainer}>
         <button type="button" class="btn btn-success">
             <Link 
@@ -48,13 +47,11 @@ function TopMessage() {
                   GO TO SEE MY PROFILE
             </Link>
         </button>
-      <button type="button" class="btn btn-warning" id="button-portfolio">
-        GO TO SEE MY PORTFOLIO
-      </button>
+        <button type="button" class="btn btn-warning" id="button-portfolio">
+          GO TO SEE MY PORTFOLIO
+        </button>
       </div>
-      
     </div>
-    
   )
 }
 
@@ -76,7 +73,7 @@ function HomeMain (){
   useEffect(() => setTimeout(setIndexHandler,6000))
 
   return(
-    <div className="container">
+    // <div className="container">
         <div className={styles.homeMain}>
             <ImageSlide2
                   className={styles.homeMain__imageSlide}
@@ -85,7 +82,7 @@ function HomeMain (){
             />
             <TopMessage/>
         </div>
-    </div>
+    // </div>
     
   )
 }
