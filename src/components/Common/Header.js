@@ -5,7 +5,7 @@ import styles from '../../styles/header.module.css'
 
 function Header(){
     return (
-      <div className="container">
+      // <div className="container">
           <div className={styles.header}>
               <h className={styles.header__title}>Michihiro Goto`s Gallery</h>
               <div className={styles.header__navigation} >
@@ -17,7 +17,7 @@ function Header(){
                 <i className="header-logo fab fa-linkedin"></i>
               </div>
           </div>
-      </div>
+      // </div>
     );
 }
 
