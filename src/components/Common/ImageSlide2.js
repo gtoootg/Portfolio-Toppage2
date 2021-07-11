@@ -17,16 +17,14 @@ export default function ImageSlide2(props) {
   return (
     <div className={className}>
       {transitions((style, i) => (
-        <animated.div
-          style={{
-            ...style,
-            width:"100%",
-            height:"100%",
-            backgroundSize:"cover",
-            // backgroundPosition:"bottom",
-            position:"absolute",
-            backgroundImage: `url(${slides[i].image})`,
-          }}
+        <animated.img
+           src={slides[i].image}
+            style={{
+                ...style,
+                width:"100%",
+                height:"auto",
+                position:"absolute"        
+            }}
         />
       ))}
     </div>
