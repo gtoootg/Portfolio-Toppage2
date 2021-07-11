@@ -1,20 +1,29 @@
 .homeMain {
-  width: 100%;
-  height: auto;
+  width: 1280px;
+  padding-bottom: 853.33333px;
+  margin: 0 auto;
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .homeMain {
+    width: 100%;
+    padding-bottom: 0;
+    position: static;
+  }
+}
+
 .homeMain__imageSlide {
-  position: absolute;
+  position: relative;
   width: 100%;
-  aspect-ratio: 3.2/2;
+  height: auto;
   z-index: 1;
 }
 
 @media (max-width: 600px) {
   .homeMain__imageSlide {
-    aspect-ratio: 3/2;
-    position: relative;
+    width: 100%;
+    padding-bottom: 66.66667%;
   }
 }
 
@@ -24,11 +33,12 @@
   color: whitesmoke;
   margin-top: 130px;
   margin-left: 50px;
+  margin-right: 50px;
 }
 
 @media (max-width: 600px) {
   .homeMain__topMessage {
-    position: relative;
+    position: static;
     margin-top: 10px;
     margin-left: 10px;
     color: black;
