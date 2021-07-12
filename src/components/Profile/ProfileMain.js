@@ -1,7 +1,7 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 
 // import './index.css';
-import ImageSlide2 from '../Common/ImageSlide.js';
+import ImageSlide2 from '../Common/ImageSlide2.js';
 import styles from '../../styles/profileMain.module.css'
 
   function Introduction(){
@@ -37,10 +37,10 @@ import styles from '../../styles/profileMain.module.css'
     )
   }
 
-  function BasicOfMyself(){
+  function Basic(){
     const text= 
-      <div className={styles.basicOfMyself}>
-        <div className={styles.basicOfMyself__textContainer}>
+      <div className={styles.basic}>
+        <div className={styles.basic__textContainer}>
           <p><strong>Name:</strong>Michihiro Goto</p>
           <p><strong>Birthday:</strong>31/01/1992</p>
           <p><strong>HomeTown:</strong>Otsu,Japan. </p>
@@ -55,8 +55,8 @@ import styles from '../../styles/profileMain.module.css'
 
   }
 
-  function EducationOfMyself(){
-    const[count, setCount] = useState(0)
+  function Education(){
+    const[index, setIndex] = useState(0)
 
     const PhotoList=[
       {
@@ -66,24 +66,31 @@ import styles from '../../styles/profileMain.module.css'
       },
       {
         id:1,
-        name:'KIT_2',
-        image:'image/KIT_2.jpg',
-      },
-      {
-        id:2,
         name:'KIT_3',
         image:'image/KIT_3.jpg',
       },
       {
-        id:3,
+        id:2,
         name:'KIT_4',
         image:'image/KIT_4.jpg',
       }
     ]
 
+    const setIndexHandler = ()=>{
+      if(index===2){
+        setIndex(0)
+      }else{
+        setIndex(index+1)
+      }
+    }
+  
+
+    useEffect(() => setTimeout(setIndexHandler,6000))
+
+
     const text= 
-      <div className="container">
-        <table className="table mb-4">
+      <div className={styles.education}>
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Degree</th>
@@ -107,32 +114,20 @@ import styles from '../../styles/profileMain.module.css'
             </tr>
           </tbody>
         </table>
-        <div className="container d-flex flex-row justfy-content-between">
-          <div className="col-7 container">
-          <p6>
-            I majored in Mechanical engineering in Kyoto institute of technology (KIT).
-            During total 6 years of bachelor and master courses in KIT, I spent the precious time to learn the basic of mechanical engineering which led to my current career as automotive engineer in Germany. Not only for this, it was definetely worth being in Kyoto which attracts many international students around the world. Over this 6 years in Kyoto, I could nourish my own international mind, and make many connections with foreign people.
-          </p6><br/><br/>
-          <a href="https://www.kit.ac.jp/en/">Go to See my University</a>
-        </div>
-
-          <div className="col-1"></div>
-          <div className="image-container col-4" style={{position:'relative'}}>
-            <ImageSlide2
-            Items={PhotoList}
-            count={count}
-            setCount={setCount}
-            opacity={1}
-            />
+        <div className={styles.education__lowerContainer}>
+          <div className={styles.education__lowerContainer__text}>
+                I majored in Mechanical engineering in Kyoto institute of technology (KIT).
+                During total 6 years of bachelor and master courses in KIT, I spent the precious time to learn the basic of mechanical engineering which led to my current career as automotive engineer in Germany. Not only for this, it was definetely worth being in Kyoto which attracts many international students around the world. Over this 6 years in Kyoto, I could nourish my own international mind, and make many connections with foreign people.
           </div>
+          <ImageSlide2
+            slides={PhotoList}
+            index={index}
+            className={styles.education__lowerContainer__image}
+            />
         </div>
-        {/* <div onClick={()=>setCount(3)}>Set</div>
-        <div onClick={()=>console.log(count)}>check</div> */}
       </div>
     return(
-      <div>
         <Accordion value={"Education of myself"} text={text} Id={"Two"}/>
-      </div>
     )
 
   }
@@ -204,8 +199,8 @@ import styles from '../../styles/profileMain.module.css'
       <div className={styles.profileMain}>
           <Introduction/>
           <div className={styles.profileMain__accordion}>
-              <BasicOfMyself/>
-              <EducationOfMyself/>
+              <Basic/>
+              <Education/>
               <CareerOfMyself/>
               <WhyAmILivingInGermany/>
               <WhatIsThePleasureOfMylife/>
