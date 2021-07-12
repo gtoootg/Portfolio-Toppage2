@@ -5,7 +5,7 @@
 
 @media (max-width: 600px) {
   .profileMain {
-    width: 95%;
+    width: 97%;
     margin: 0 auto;
   }
 }
@@ -56,15 +56,11 @@
 
 @media (max-width: 600px) {
   .profileMain__introduction__textContainer h2 {
-    font-size: 11px;
+    font-size: 15px;
   }
 }
 
-.profileMain__accordion {
-  font-size: 15px;
-}
-
-.profileMain__accordion .basicOfMyself {
+.profileMain .basic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +71,7 @@
 }
 
 @media (max-width: 600px) {
-  .profileMain__accordion .basicOfMyself {
+  .profileMain .basic {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -83,23 +79,75 @@
   }
 }
 
-.profileMain__accordion .basicOfMyself__textContainer {
+.profileMain .basic__textContainer {
   width: 50%;
 }
 
 @media (max-width: 600px) {
-  .profileMain__accordion .basicOfMyself__textContainer {
+  .profileMain .basic__textContainer {
     width: 100%;
   }
 }
 
-.profileMain__accordion .basicOfMyself iframe {
+.profileMain .basic iframe {
   width: 40%;
 }
 
 @media (max-width: 600px) {
-  .profileMain__accordion .basicOfMyself iframe {
+  .profileMain .basic iframe {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .profileMain .education {
+    font-size: 12px;
+  }
+}
+
+.profileMain .education__lowerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .profileMain .education__lowerContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.profileMain .education__lowerContainer__text {
+  width: 45%;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .profileMain .education__lowerContainer__text {
+    width: 90%;
+    font-size: 15px;
+  }
+}
+
+.profileMain .education__lowerContainer__image {
+  width: 30%;
+  padding-bottom: 66.66667%;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .profileMain .education__lowerContainer__image {
+    width: 100%;
+    padding-bottom: 66.66667%;
   }
 }
 /*# sourceMappingURL=profileMain.module.css.map */
