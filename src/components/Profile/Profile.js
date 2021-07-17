@@ -1,5 +1,6 @@
 import ProfileMain from './ProfileMain';
 import Header from '../Common/Header';
+import Footer from '../Common/Footer';
 
 function Profile() {
   return (
@@ -9,6 +10,7 @@ function Profile() {
           color="black"
     />
     <ProfileMain/>
+    <Footer/>
   </>
   );
 }

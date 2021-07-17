@@ -4,7 +4,18 @@ import React,{useState, useEffect} from 'react';
 import ImageSlide2 from '../Common/ImageSlide2.js';
 import styles from '../../styles/profileMain.module.css'
 
-  function Introduction(){
+
+  function ProfileMain(){
+
+    const [size, setSize] = useState(
+      { 'width': window.innerWidth, 'height': window.innerHeight }
+      );
+    window.addEventListener('resize', function () {
+      setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
+    }, true);
+
+
+    function Introduction(){
       return(
         <div className={styles.profileMain__introduction}>
           <img id="topImage" src="image/profilepicture.jpg" alt="kyoto"/>
@@ -84,9 +95,7 @@ import styles from '../../styles/profileMain.module.css'
       }
     }
   
-
     useEffect(() => setTimeout(setIndexHandler,6000))
-
 
     const text= 
       <div className={styles.education}>
@@ -129,82 +138,192 @@ import styles from '../../styles/profileMain.module.css'
     return(
         <Accordion value={"Education of myself"} text={text} Id={"Two"}/>
     )
-
   }
 
-  function CareerOfMyself(){
-    const text = 
-      <div>
-          <table className="table mb-4">
-            <thead>
-              <tr>
-                <th scope="col">Degree</th>
-                <th scope="col">University</th>
-                <th scope="col">City</th>
-                <th scope="col">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td >Master of Sicence in Mechanical Engineering</td>
-                <td>Kyoto Institute of Technology</td>
-                <td>Kyoto Japan</td>
-                <td>Apr.2014 - Mar.2016</td>
-              </tr>
-              <tr>
-                <td >Bachelor of Sicence in Mechanical Engineering</td>
-                <td>Kyoto Institute of Technology</td>
-                <td>Kyoto Japan</td>
-                <td>Apr.2010 - Mar.2014</td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
+  function Career(){
+
+    const jobs = [{
+      position:"Design Engineer of Bearing for Automotive application",
+      company:"JTEKT Cooperation",
+      description:()=>{
+        return(
+          <div className="d-flex flex-column">
+              <div>
+                <p>-</p>
+                <p>Design and Development of bearings for Automotive chassis application, mainly for American and European customer (GM,BMW,DAIMLER)</p>
+              </div>
+              <div>
+                  <p>-</p>
+                  <p>Coordination of development activity of nominated project with related department such as Testing/Production/Cost/Sales/Purchase division, including North American and Chinese branches</p>
+              </div>
+              <div>
+                  <p>-</p>
+                  <p>Cost reduction activity</p>
+              </div>
+              <div>
+                  <p>-</p>
+                  <p>Education of trainee from foreign branches in America</p>              
+              </div>
+          </div>
+        )
+      },
+      city:"Osaka, Japan",
+      duration:"Apr.2016-Mar.2019"
+    },
+    {
+      position:"Application Engineer of Bearing for Automotive application",
+      company:"KOYO Deutschland GmbH JTEKT European Operation",
+      description:()=>{
+        return (
+                <div className="d-flex flex-column">
+                    <div>
+                          <p>-</p>
+                          <p>Design and Development of bearings for Automotive powertrain/drive train application, such as E-motor and Transmission</p>
+                    </div>
+                    <div>
+                          <p>-</p>
+                          <p>Customer service for bearing application in European region(BMW, Volvo, FIAT, Ferrari)</p>
+                    </div>
+                </div>
+                )
+      },
+      city:"Munich, Germany",
+      duration:"Mar.2019-Current"
+    }]
+
+    const layoutForLaptop =jobs.map((job,index)=>{
+      return(
+            <tr>
+                <td className={styles.position}>{job.position}</td>
+                <td className={styles.company}>{job.company}</td>
+                <td className={styles.description}>
+                    {job.description()}
+                    <br/>
+                </td>
+                <td className={styles.city}>{job.city}</td>
+                <td className={styles.duration}>{job.duration}</td>
+            </tr>
+      )
+    })
+
+    const layoutForSmartphone = jobs.map((job, index)=>{
+      return(
+        <>
+          <div>
+            <b><h>Job Experience {index+1}</h></b>
+          </div>
+          <div className={styles.position}>
+                <b>Position:</b>
+                <div>
+                    {job.position}
+                </div>
+          </div>
+          <div className={styles.company}>
+              <b>Company:</b>
+              <div>{job.company}</div>
+          </div>
+          <div className={styles.city}>
+              <b>City:</b>
+              <div>
+                {job.city}
+               </div>
+          </div>
+          <div className={styles.duration}>
+              <b>Duration:</b>
+              <div>
+                 {job.duration}
+              </div>
+          </div>
+          <div className={styles.description}>
+              <b>Description:</b>
+              <div>
+                 {job.description()}
+              </div>
+          </div>
+        </>
+      )
+    })
+
+
+    const explanation = (
+            <div>
+              In 2016, I kicked off my career as mechanical design engineer in Automotive field in JTEKT cooperation which is a worldwide automotive supplier of bearings/steering/drivetrain components. The main role of mine was design and development of bearings used for automotive chassis application. During 3 years in JTEKT Japan, I was in charge of many development projects of new bearing product for car makers in North America, Europe and Japan. 
+              <br/>
+              <br/>
+              In 2019, I switched my contract to European branches of JTEKT, and I started my next career of mechanical design engineer in Munich. Until now, I have been engaged to bearing design for electric vehicle application. In addition, I work in frontloading position to support European customers in Germany, Italy, and Sweden. Since European countries are rapidly making the transformation to Electric vehicle from local to global level, the development of our product is really challlenging and tough. However, I feel really excited to be in touch with one of the top paradigm shift in the global industry.
+            </div>
+    )
+
+    const text = ()=>{
+      if(size.width>600){
+        return(
+          <div classNane={styles.career}>
+              <table className={styles.career__table}>
+                <thead>
+                  <tr>
+                    <th scope="col" className={styles.position}>Position</th>
+                    <th scope="col" className={styles.company}>Company</th>
+                    <th scope="col" className={styles.description}>Description</th>
+                    <th scope="col" className={styles.city}>City</th>
+                    <th scope="col" className={styles.duration}>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {layoutForLaptop}
+                </tbody>
+              </table>
+              <br/>
+              {explanation}
+          </div>
+        )
+    }else{
+        return(
+          <div className={styles.career}>
+            <div className={styles.career__table}>
+              {layoutForSmartphone}
+            </div>
+            {explanation}
+          </div>
+        )
+        }
+    }
+    
     return(
-      <div>
-        <Accordion value={"Career of myself"} text={text} Id={"Three"}/>
-      </div>
+        <Accordion value={"Career of myself"} text={text()} Id={"Three"} />
     )
   }
 
-  function WhyAmILivingInGermany(){
+  // function WhyAmILivingInGermany(){
+  //   const text = 
+  //     <div>
+  //       Since I was a student, I had a strong interest of getting to know about foreign cultures and pepole. This interest led me to make many proactive actions such as learning foreign languages and travel abroad. After several years in the university, I leaned that what is essentially important to my life is to be surroinded by internationality. Fortunately, I had some chances to visit Germany and to know that Germany is the most international nation which accepts diversity in human beings.
+  //       So naturally 
+  //     </div>
+  //   return(
+  //     <div>
+  //       <Accordion value={"Why am I living in Germany?"} text={text} Id={"Four"}/>
+  //     </div>
+  //   )
+  // }
+
+
+  function Motivation(){
     const text = <div>"aaa"</div>
     return(
       <div>
-        <Accordion value={"Why am I living in Germany?"} text={text} Id={"Four"}/>
+        <Accordion value={"Motivation to start career as Web developer"} text={text} Id={"Six"}/>
       </div>
     )
   }
 
-  function WhatIsThePleasureOfMylife(){
-    const text = <div>"aaa"</div>
-    return(
-      <div>
-        <Accordion value={"What is the pleasure of my life?"} text={text} Id={"Five"}/>
-      </div>
-    )
-  }
-
-  function WhyDoIHaveThisPortfolio(){
-    const text = <div>"aaa"</div>
-    return(
-      <div>
-        <Accordion value={"Why do I have this portfolio?"} text={text} Id={"Six"}/>
-      </div>
-    )
-  }
-
-  function ProfileMain(){
     return(
       <div className={styles.profileMain}>
           <Introduction/>
-          <div className={styles.profileMain__accordion}>
+          <div>
               <Basic/>
+              <Motivation/>
               <Education/>
-              <CareerOfMyself/>
-              <WhyAmILivingInGermany/>
-              <WhatIsThePleasureOfMylife/>
-              <WhyDoIHaveThisPortfolio/>
+              <Career/>
           </div>
       </div>
     )
