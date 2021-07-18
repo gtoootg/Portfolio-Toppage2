@@ -308,8 +308,24 @@ import styles from '../../styles/profileMain.module.css'
 
 
   function Motivation(){
-    const text = <div>"aaa"</div>
-    return(
+    const text = 
+        <div className={styles.motivation}>
+            <div className={styles.motivation__textContainer}> 
+                After 5 years experience in Mechanical Engineering in Automotive industry, I got to have some interest to switch my career in different engineering field. Due to Covid situation since last year and spending most of my free time at home, I started learning coding languages by myself. For the first 3 month, I learned HTML/CSS/JavaScript/PHP/MySQL to roughly understand how web application works. Then, I made a goal to make portfolio to introduce my favourite places and photos in the world which are my life hobbies. During the process of making this portfolio, I learned modern coding language such as React.js, TypeScript, Laravel, and Module CSS to integrate them into the coding of my portfolio. 
+            </div>
+            <div className={styles.motivation__imageContainer}>
+               <b>What I have learned and used for my portfolio:</b><br/>
+               <img src="image/html.png" alt="html"/>
+               <img src="image/css.png" alt="css"/>
+               <img src="image/javascript.png" alt="javascript"/>
+               <img src="image/react.png" alt="react"/>
+               <img src="image/typescript.png" alt="typescript"/>
+               <img src="image/laravel.png" alt="laravel"/>
+               <img src="image/mysql.png" alt="mysql"/>
+            </div>
+        </div>
+
+        return(
       <div>
         <Accordion value={"Motivation to start career as Web developer"} text={text} Id={"Six"}/>
       </div>
