@@ -31,9 +31,7 @@ function TopMessage() {
   return(
     <div className={styles.homeMain__topMessage}>
       <h1>Hello My name is Michihiro Goto</h1>
-      <h4>I am Japanese living in Munich,Germany
-          In this website, you can find things about myself, 
-          including my career, portfolio, and travel gallery.
+      <h4>I am Japanese living in Munich,Germany. Currently, I am looking for a position as Web application developer. I made this website and portfolio to present my motivation and skills of coding language.In this website, you can find things about myself, including my career, portfolio.
       </h4>
       <div className={styles.homeMain__topMessage__buttonContainer}>
         <button type="button" class="btn btn-success">
