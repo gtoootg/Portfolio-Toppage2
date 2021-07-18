@@ -207,4 +207,23 @@
     margin-bottom: 10px;
   }
 }
+
+.profileMain .motivation {
+  text-align: justify;
+}
+
+.profileMain .motivation__imageContainer {
+  margin-top: 30px;
+}
+
+.profileMain .motivation img {
+  width: 10%;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .profileMain .motivation img {
+    width: 20%;
+  }
+}
 /*# sourceMappingURL=profileMain.module.css.map */
