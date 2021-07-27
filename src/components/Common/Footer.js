@@ -21,9 +21,16 @@ function FooterRight(){
             <h4>KOYO Deutschland GmbH</h4>
             <h4>email: michihirogoto@yahoo.com</h4>
             <div className={styles.footer__right__iconContainer}>
-                {/* <i className="header-logo fab fa-youtube"></i> */}
-                <i className="header-logo fab fa-instagram"></i>
-                <i className="header-logo fab fa-linkedin"></i>
+                <a
+                    href="https://www.instagram.com/gt.europa/"
+                >
+                    <i  className="header-logo fab fa-instagram"/>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/%E5%80%AB%E5%AE%8F-%E5%BE%8C%E8%97%A4-37b905218/"
+                >
+                    <i className="header-logo fab fa-linkedin"></i>
+                </a>            
             </div>
         </div>
     )
