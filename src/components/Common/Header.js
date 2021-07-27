@@ -28,7 +28,16 @@ function Header(props){
                         >
                         Portfolio
                         </a>
-                    </span>     
+                    </span>
+                    <a 
+                        href="https://github.com/gtoootg0131/Portfolio-Toppage2"
+                        style={{color:color}}
+                    > 
+                        <i 
+                            className="header-logo fab fa-github" 
+                            style={{color:color}}
+                        />
+                    </a>
                     <a 
                         href="https://www.instagram.com/gt.europa/"
                         style={{color:color}}

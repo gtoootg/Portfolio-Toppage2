@@ -22,6 +22,11 @@ function FooterRight(){
             <h4>email: michihirogoto@yahoo.com</h4>
             <div className={styles.footer__right__iconContainer}>
                 <a
+                    href="https://github.com/gtoootg0131/Portfolio-Toppage2"
+                >
+                    <i  className="header-logo fab fa-github"/>
+                </a>
+                <a
                     href="https://www.instagram.com/gt.europa/"
                 >
                     <i  className="header-logo fab fa-instagram"/>
