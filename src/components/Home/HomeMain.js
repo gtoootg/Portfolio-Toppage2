@@ -46,7 +46,9 @@ function TopMessage() {
             </Link>
         </button>
         <button type="button" class="btn btn-warning" id="button-portfolio">
-          GO TO SEE MY PORTFOLIO
+            <a href="https://goto-travels.herokuapp.com/">
+                GO TO SEE MY PORTFOLIO
+            </a>
         </button>
       </div>
     </div>

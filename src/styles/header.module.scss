@@ -14,7 +14,6 @@
         justify-content:start;
     }
 
-
     &__title{
         font-size: 45px;
         font-weight:bold;
@@ -35,7 +34,7 @@
             font-size:25px;
             margin-right:10px;
             margin-left:10px;
-            text-decoration:none; 
+            text-decoration:none;
         }
 
         @media(max-width:600px){
@@ -49,6 +48,4 @@
             }
         }
     }
-
-
 }
