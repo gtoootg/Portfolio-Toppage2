@@ -14,7 +14,6 @@ import styles from '../../styles/profileMain.module.css'
       setSize({ 'width': window.innerWidth, 'height': window.innerHeight });
     }, true);
 
-
     function Introduction(){
       return(
         <div className={styles.profileMain__introduction}>
@@ -28,7 +27,6 @@ import styles from '../../styles/profileMain.module.css'
         </div>
       )
   }
-
 
     function Accordion(props){
 
